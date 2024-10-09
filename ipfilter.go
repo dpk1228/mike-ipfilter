@@ -93,9 +93,9 @@ func (f *IPFilter) IsAllowedIP(ip string) (bool, error) {
 	}
 
 	// Add a check for private or special IP addresses
-	if IsPrivateOrSpecialIP(ipAddr) {
-		return false, nil
-	}
+	// if IsPrivateOrSpecialIP(ipAddr) {
+	// 	return false, nil
+	// }
 
 	for _, rule := range f.rules {
 		if rule.Target == "all" {
